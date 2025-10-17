@@ -3,16 +3,40 @@ package org.example;
 public class FoodFastUtils {
     public static String deliveryPlanner(int n) {
         if(n%3 == 0) {
-            System.out.println("Fizz !");
+            return("Fizz !");
         }
         else if(n%5 == 0) {
-            System.out.println("Buzz !");
+            return("Buzz !");
         }
         else if(n%2 == 0) {
-            System.out.println("FizzBuzz !");
+            return("FizzBuzz !");
         }else{
-            System.out.println(n);
+            return("Error");
         }
-        return "";
+    }
+
+    static boolean isLeapYear(int year) {
+        if(year%400 == 0) {
+            return(true);
+        }else if(year%100 == 0) {
+            return(false);
+        }else if(year%4 == 0) {
+            return(true);
+        }else{
+            return(false);
+        }
+    }
+
+    static int sumUpTo(int n) {
+        return(n*(n+1)/2);
+    }
+
+    static String anonymize(String text) {
+        String reversed = "";
+
+        for (int i = 0; i < text.length(); i++){
+            reversed = text.charAt(i) + reversed;
+        }
+        return(reversed);
     }
 }
