@@ -3,7 +3,6 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-
-        Application.main(new String[]{"test"});
+        System.out.println(FoodFastUtils.sumUpTo(5));
     }
 }
