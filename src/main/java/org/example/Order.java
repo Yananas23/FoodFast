@@ -12,6 +12,10 @@ public class Order {
     private Customer customer;
     private LocalDateTime orderDate;
 
+    public String getId() {
+        return id;
+    }
+
     public enum OrderStatus {
         PENDING, IN_PREPARATION, COMPLETED, CANCELLED
     }
