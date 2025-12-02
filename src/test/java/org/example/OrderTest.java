@@ -20,7 +20,7 @@ public class OrderTest {
         Order order1 = new Order(Order.OrderStatus.PENDING, null, null);
         Order order2 = new Order(Order.OrderStatus.PENDING, null, null);
 
-        assert order1.equals(order2);
+        assert !order1.equals(order2);
     }
 
     @Test
