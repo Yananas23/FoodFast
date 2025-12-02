@@ -57,14 +57,12 @@ public class Order {
         if (this == o) return true;
         if (!(o instanceof Order)) return false;
         Order order = (Order) o;
-        return Objects.equals(status, order.status) &&
-                Objects.equals(dishes, order.dishes) &&
-                Objects.equals(customer, order.customer);
+        return Objects.equals(id, order.id);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, status, dishes, customer, orderDate);
+        return Objects.hash(id);
     }
 
     @Override
