@@ -14,4 +14,30 @@ public class OrderTest {
         assert order.getCustomer() == null;
         assert order.getOrderDate() != null;
     }
+
+    public void testEquals() {
+        Order order1 = new Order(Order.OrderStatus.PENDING, null, null);
+        Order order2 = new Order(Order.OrderStatus.PENDING, null, null);
+
+        assert !order1.equals(order2);
+    }
+
+    public void testHashCode() {
+        Order order1 = new Order(Order.OrderStatus.PENDING, null, null);
+        Order order2 = new Order(Order.OrderStatus.PENDING, null, null);
+
+        assert order1.hashCode() != order2.hashCode();
+    }
+
+    public void testToString() {
+        Order order = new Order(Order.OrderStatus.PENDING, null, null);
+        String toString = order.toString();
+
+        assert toString.contains("Order");
+        assert toString.contains("id='");
+        assert toString.contains("status=");
+        assert toString.contains("dishes=");
+        assert toString.contains("customer=");
+        assert toString.contains("orderDate=");
+    }
 }
