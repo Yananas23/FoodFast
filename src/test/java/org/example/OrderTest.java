@@ -12,6 +12,5 @@ public class OrderTest {
         assert order.getDishes() == null;
         assert order.getCustomer() == null;
         assert order.getOrderDate() != null;
-
     }
 }
