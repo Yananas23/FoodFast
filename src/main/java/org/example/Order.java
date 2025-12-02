@@ -3,6 +3,7 @@ package org.example;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.Map;
+import java.util.Objects;
 import java.util.UUID;
 
 public class Order {
@@ -49,5 +50,31 @@ public class Order {
 
     public LocalDateTime getOrderDate() {
         return orderDate;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Order)) return false;
+        Order order = (Order) o;
+        return Objects.equals(status, order.status) &&
+                Objects.equals(dishes, order.dishes) &&
+                Objects.equals(customer, order.customer);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(status, dishes, customer, orderDate);
+    }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id='" + id + '\'' +
+                ", status=" + status +
+                ", dishes=" + dishes +
+                ", customer=" + customer +
+                ", orderDate=" + orderDate +
+                '}';
     }
 }
