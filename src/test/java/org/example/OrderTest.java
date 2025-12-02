@@ -2,14 +2,14 @@ package org.example;
 
 import org.junit.jupiter.api.Test;
 
-import java.math.BigDecimal;
-
 public class OrderTest {
     @Test
     public void testGetter() {
+        Order order = new Order();
+        order.setId(1);
+        order.setDescription("Test Order");
 
-        Order order = new Order(Order.OrderStatus.PENDING, null, null);
-
-        assert order.getId() != null;
+        assert order.getId() == 1;
+        assert order.getDescription().equals("Test Order");
     }
 }
