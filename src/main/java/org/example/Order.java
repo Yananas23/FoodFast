@@ -34,5 +34,20 @@ public class Order {
                 .multiply(BigDecimal.valueOf(entry.getValue())))
                 .reduce(BigDecimal.ZERO, BigDecimal::add);
     }
+    
+    public OrderStatus getStatus() {
+        return status;
+    }
 
+    public Map<Dish, Integer> getDishes() {
+        return dishes;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public LocalDateTime getOrderDate() {
+        return orderDate;
+    }
 }
