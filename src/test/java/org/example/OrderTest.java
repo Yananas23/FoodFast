@@ -5,11 +5,13 @@ import org.junit.jupiter.api.Test;
 public class OrderTest {
     @Test
     public void testGetter() {
-        Order order = new Order();
-        order.setId(1);
-        order.setDescription("Test Order");
+        Order order = new Order(Order.OrderStatus.PENDING, null, null);
+        
+        assert order.getId() != null;
+        assert order.getStatus() == Order.OrderStatus.PENDING;
+        assert order.getDishes() == null;
+        assert order.getCustomer() == null;
+        assert order.getOrderDate() != null;
 
-        assert order.getId() == 1;
-        assert order.getDescription().equals("Test Order");
     }
 }
