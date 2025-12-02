@@ -15,6 +15,7 @@ public class OrderTest {
         assert order.getOrderDate() != null;
     }
 
+    @Test
     public void testEquals() {
         Order order1 = new Order(Order.OrderStatus.PENDING, null, null);
         Order order2 = new Order(Order.OrderStatus.PENDING, null, null);
@@ -22,6 +23,7 @@ public class OrderTest {
         assert !order1.equals(order2);
     }
 
+    @Test
     public void testHashCode() {
         Order order1 = new Order(Order.OrderStatus.PENDING, null, null);
         Order order2 = new Order(Order.OrderStatus.PENDING, null, null);
@@ -29,6 +31,7 @@ public class OrderTest {
         assert order1.hashCode() != order2.hashCode();
     }
 
+    @Test
     public void testToString() {
         Order order = new Order(Order.OrderStatus.PENDING, null, null);
         String toString = order.toString();
