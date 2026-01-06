@@ -40,6 +40,10 @@ public class Order {
         return status;
     }
 
+    public void setStatus(OrderStatus status) {
+        this.status = status;
+    }
+
     public Map<Dish, Integer> getDishes() {
         return dishes;
     }
