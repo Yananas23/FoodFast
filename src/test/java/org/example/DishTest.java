@@ -6,7 +6,7 @@ public class DishTest {
     @Test
     public void testGetter() {
 
-        Dish order = new Order(Order.OrderStatus.PENDING, null, null);
+        Order order = new Order(Order.OrderStatus.PENDING, null, null);
 
         assert order.getId() != null;
         assert order.getStatus() == Order.OrderStatus.PENDING;
