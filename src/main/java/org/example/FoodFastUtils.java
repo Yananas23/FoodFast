@@ -3,15 +3,13 @@ package org.example;
 public class FoodFastUtils {
     public static String deliveryPlanner(int n) {
         if(n%3 == 0) {
-            return("Fizz !");
-        }
-        else if(n%5 == 0) {
-            return("Buzz !");
-        }
-        else if(n%2 == 0) {
-            return("FizzBuzz !");
+            return "Fizz !";
+        }else if(n%5 == 0) {
+            return "Buzz !";
+        }else if(n%2 == 0) {
+            return "FizzBuzz !";
         }else{
-            return("Error");
+            return "Error";
         }
     }
 
