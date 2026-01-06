@@ -10,6 +10,13 @@ public class DeliveryPlatform {
      private Map<String, Order> orders;
 
      public void placeOrder(Order order) {
+        try {
+            Restaurant restaurant = new Restaurant();
+            restaurant.prepareOrder(order);
+        } catch (OrderPreparationException e) {
+            order.setStatus(OrderStatus.CANCELLED);
+            return;
+        }
          orders.put(order.getId(), order);
      }
 
