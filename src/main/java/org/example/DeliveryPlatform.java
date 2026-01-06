@@ -1,13 +1,14 @@
 package org.example;
 
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 
 import org.example.Order.OrderStatus;
 
 public class DeliveryPlatform {
-     private Map<String, Order> orders;
+     private final ConcurrentMap<String, Order> orders = new ConcurrentHashMap<>();
 
      public void placeOrder(Order order) {
         try {
