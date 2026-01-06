@@ -32,8 +32,12 @@ public class Dish {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Dish)) return false;
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof Dish)) {
+            return false;
+        }
         Dish dish = (Dish) o;
         return Objects.equals(name, dish.name) &&
                 Objects.equals(price, dish.price) &&
