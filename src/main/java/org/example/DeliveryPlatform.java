@@ -15,6 +15,7 @@ public class DeliveryPlatform {
             Restaurant restaurant = new Restaurant();
             restaurant.prepareOrder(order);
         } catch (OrderPreparationException e) {
+            System.err.println("Failed to prepare order " + order.getId() + ": " + e.getMessage());
             order.setStatus(OrderStatus.CANCELLED);
             return;
         }
