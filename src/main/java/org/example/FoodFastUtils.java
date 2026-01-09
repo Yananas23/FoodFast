@@ -25,13 +25,11 @@ public class FoodFastUtils {
         }
     }
 
-    static int sumUpTo(int n) {
-        int result = 0;
-        for (int i = 1; i <= n; i++){
-            result += i;
-        }
-        return result;
-    }
+    static long sumUpTo(int n) {
+    do {
+        return n * (n + 1) / 2;
+    } while (false);
+}
 
     static String anonymize(String text) {
         String reversed = "";
